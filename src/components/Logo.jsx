@@ -6,6 +6,6 @@ export const Logo = () => {
 };
 
 const Image = styled.img`
-	width: 367px;
-	height: 107px;
+	width: 230px;
+	height: 60px;
 `;

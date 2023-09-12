@@ -8,9 +8,10 @@ export const Button = styled.button`
 	color: #fff;
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	font-family: Jua;
-	font-size: 40px;
+	font-size: 32px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-  padding: 25px 35px;
+  padding: 20px 35px;
+	white-space : nowrap;
 `;
