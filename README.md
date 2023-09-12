@@ -1,8 +1,28 @@
-# React + Vite
+# Rozet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+타로카드로 오늘의 운세를 확인할수 있습니다.
 
-Currently, two official plugins are available:
+## Requirement
+```
+javascript, react, vite, prettier, Eslint, babel, core-js, recoil, framer-motion, commitlint, husky, lint-stage
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to run? 
+```bash
+npm install
+npm run dev
+```
+
+## Project structure
+```
+$ tree
+├─public
+└─src
+    ├─assets 미디어데이터
+    ├─components 재사용 가능한 컴포넌트
+    ├─constants 상수데이터
+    ├─hooks 커스텀훅 액션함수
+    ├─app.jsx 컴포넌트
+    ├─main.jsx 실행지점
+    └─utils 계산함수 유틸함수
+```
