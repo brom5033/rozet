@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 export const Logo = () => {
-	return <Image src="/images/LOGO.png" alt="rozet logo" />;
+	return <Image src="/images/logo.png" alt="rozet logo" />;
 };
 
 const Image = styled.img`
