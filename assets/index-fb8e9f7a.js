@@ -205,4 +205,4 @@ Error generating stack: `+i.message+`
 `,Wa=fe.p`
 	margin: 8px;
 	font-size: 14px;
-`,wC=()=>F.jsx(Y0,{children:F.jsxs(G0,{children:[F.jsx(Ii,{path:"/",element:F.jsx(X1,{})}),F.jsx(Ii,{path:"/randomcard",element:F.jsx(sC,{})}),F.jsx(Ii,{path:"/result",element:F.jsx(pC,{})})]})});Ka.createRoot(document.getElementById("root")).render(F.jsx(ce.StrictMode,{children:F.jsx(QT,{children:F.jsx(wC,{})})}));
+`,wC=()=>F.jsx(Y0,{basename:"/rozet",children:F.jsxs(G0,{children:[F.jsx(Ii,{path:"/",element:F.jsx(X1,{})}),F.jsx(Ii,{path:"/randomcard",element:F.jsx(sC,{})}),F.jsx(Ii,{path:"/result",element:F.jsx(pC,{})})]})});Ka.createRoot(document.getElementById("root")).render(F.jsx(ce.StrictMode,{children:F.jsx(QT,{children:F.jsx(wC,{})})}));
