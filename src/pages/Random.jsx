@@ -52,6 +52,7 @@ export const Random = () => {
 
 const Container = styled.div`
 	width: 710px;
+	height: 600px;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
