@@ -1,0 +1,3 @@
+export cardGauge = () => {
+  return 
+};

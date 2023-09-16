@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+
+// stores
+import { cardState } from '../stores/card';
+
+// components
 import { BackgroundBlur } from '../components/BackgroundBlur';
 import { Logo } from '../components/Logo';
 import { Button } from '../components/Button';
 import { Box } from '../components/Box';
-import { cardData } from '../constants/cardData';
 import { Backofcard } from '../components/Backofcard';
 
+// constants
+import { cardData } from '../constants/cardData';
+
 export const Random = () => {
+  const cardSet = useSetRecoilState(cardState);
 	const randomCard = cardData.sort(() => Math.random() - 0.5);
 	const [mixedCard, setMixedCard] = useState(randomCard);
 	const mixCard = () => {
@@ -16,8 +25,8 @@ export const Random = () => {
 	};
 	const navigate = useNavigate();
 	const goToResult = (cardName) => {
+  cardSet(cardName);
 		navigate('/result');
-		console.log(cardName);
 	};
 	const goToStart = () => {
 		navigate('/');
@@ -30,7 +39,7 @@ export const Random = () => {
 			<Box>
 				<Container>
 					{mixedCard.map((card) => {
-						return <Backofcard onClick={()=>goToResult(card.name)} key={card.name} />;
+						return <Backofcard onClick={() => goToResult(card.name)} key={card.name} />;
 					})}
 				</Container>
 				<ButtonContainer>
@@ -43,6 +52,7 @@ export const Random = () => {
 
 const Container = styled.div`
 	width: 710px;
+	height: 600px;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
