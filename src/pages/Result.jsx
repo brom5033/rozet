@@ -31,11 +31,11 @@ export const Result = () => {
 			<Box>
 				<Container>
 					<CardContainer>
-						<img src={card.img} alt="card.img" />
+						<img src={card.img} alt={card.name} />
 					</CardContainer>
 					<CardContainer marginLeft>
 						<h1>{card.name}</h1>
-						<ScoreGauge>
+						<div>
 							<p>게이지</p>
 							<ScoreGaugeOut>
 								<ScoreGaugeIn percent={card.score} />
@@ -43,7 +43,7 @@ export const Result = () => {
 							<GaugeText>
 								<Text>나쁨</Text> <Text>보통</Text> <Text>좋음</Text>
 							</GaugeText>
-						</ScoreGauge>
+						</div>
 						<div>
 							<p>키워드</p>
 							<p>{card.keyword}</p>
@@ -73,11 +73,15 @@ const Container = styled.div`
 	width: 710px;
 	height: 600px;
 	display: flex;
-	/* flex-wrap: wrap; */
 	gap: 10px;
 	justify-content: center;
 	margin: auto;
 	margin-top: 80px;
+	@media screen and (max-width: 767px) {
+		width: 100%;
+		height: auto;
+		flex-wrap: wrap;
+	}
 `;
 
 const ButtonContainer = styled.div`
@@ -92,10 +96,13 @@ const CardContainer = styled.div`
 	font-size: 18px;
 	display: flex;
 	flex-wrap: wrap;
-	${(props) => (props.marginLeft ? 'margin-left:30px' : '')}
+	${(props) => (props.marginLeft ? 'margin-left:30px;' : '')}
+	@media screen and (max-width: 767px) {
+		margin-left: 0px;
+		padding: 24px;
+	}
 `;
 // 게이지
-const ScoreGauge = styled.div``;
 const GaugeText = styled.div`
 	display: flex;
 	justify-content: space-around;

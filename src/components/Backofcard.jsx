@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import backgroundCard from '../assets/background_card.svg';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 export const Backofcard = (props) => {
 	return <Image onClick={props.onClick} src={backgroundCard} alt="backofcard" />;
@@ -16,5 +16,5 @@ const Image = styled.img`
 `;
 
 Backofcard.propTypes = {
-	onClick: PropTypes.func.isRequired
-}
+	onClick: PropTypes.func.isRequired,
+};

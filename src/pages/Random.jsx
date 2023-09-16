@@ -59,12 +59,16 @@ const Container = styled.div`
 	justify-content: center;
 	margin: auto;
 	margin-top: 80px;
+	@media screen and (max-width: 767px) {
+		width: 100%;
+		height: auto;
+	}
 `;
 
 const ButtonContainer = styled.div`
 	display: flex;
 	justify-content: center;
-	padding-top: 80px;
+	margin-top: 80px;
 `;
 
 const LogoContainer = styled.div`

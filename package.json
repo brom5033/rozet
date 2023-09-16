@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://brom5033.github.io/rozet",
+  "homepage": "https://brom5033.github.io/rozet/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
