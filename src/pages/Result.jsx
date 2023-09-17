@@ -55,7 +55,9 @@ export const Result = () => {
 					</CardContainer>
 				</Container>
 				<ButtonContainer>
-					<Button onClick={goToStart}>다시하기</Button>
+					<Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={goToStart}>
+						다시하기
+					</Button>
 				</ButtonContainer>
 			</Box>
 		</BackgroundBlur>

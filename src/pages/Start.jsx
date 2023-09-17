@@ -4,14 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import { Background } from '../components/Background';
 import { Logo } from '../components/Logo';
 import { Button } from '../components/Button';
-import { motion } from "framer-motion"
-
+import { motion } from 'framer-motion';
 
 export const Start = () => {
 	const navigate = useNavigate();
 	const goToRandom = () => {
-		navigate("/randomcard")
-	}
+		navigate('/randomcard');
+	};
 
 	return (
 		<>
@@ -22,10 +21,10 @@ export const Start = () => {
 				<LogoWrap>
 					<Logo />
 				</LogoWrap>
-				<ButtonWrap > 
-					<Button     whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.9 }} onClick={goToRandom}>오늘의운세 확인하기</Button>
-					
+				<ButtonWrap>
+					<Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={goToRandom}>
+						오늘의운세 확인하기
+					</Button>
 				</ButtonWrap>
 				<GithubWrap>
 					<GithubLink href="https://github.com/brom5033/rozet" target="_blank">
@@ -73,11 +72,9 @@ const GithubWrap = styled.div`
 	right: 24px;
 	bottom: 24px;
 	text-align: right;
-
 `;
 
 const GithubLink = styled.a`
 	color: black;
 	text-decoration: none;
 `;
-
