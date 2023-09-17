@@ -17,7 +17,7 @@ import { Backofcard } from '../components/Backofcard';
 import { cardData } from '../constants/cardData';
 
 export const Random = () => {
-  const cardSet = useSetRecoilState(cardState);
+	const cardSet = useSetRecoilState(cardState);
 	const randomCard = cardData.sort(() => Math.random() - 0.5);
 	const [mixedCard, setMixedCard] = useState(randomCard);
 	const mixCard = () => {
@@ -25,7 +25,7 @@ export const Random = () => {
 	};
 	const navigate = useNavigate();
 	const goToResult = (cardName) => {
-  cardSet(cardName);
+		cardSet(cardName);
 		navigate('/result');
 	};
 	const goToStart = () => {
@@ -39,11 +39,13 @@ export const Random = () => {
 			<Box>
 				<Container>
 					{mixedCard.map((card) => {
-						return <Backofcard onClick={() => goToResult(card.name)} key={card.name} />;
+						return <Backofcard  onClick={() => goToResult(card.name)} key={card.name} />;
 					})}
 				</Container>
 				<ButtonContainer>
-					<Button onClick={mixCard}>다시섞기</Button>
+					<Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={mixCard}>
+						다시섞기
+					</Button>
 				</ButtonContainer>
 			</Box>
 		</BackgroundBlur>

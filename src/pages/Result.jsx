@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
-
+import { motion } from 'framer-motion';
 // store
 import { cardState } from '../stores/card';
 //constants
@@ -25,12 +25,14 @@ export const Result = () => {
 
 	return (
 		<BackgroundBlur>
-			<LogoContainer onClick={goToStart}>
+			<LogoContainer  onClick={goToStart}>
 				<Logo />
 			</LogoContainer>
 			<Box>
 				<Container>
-					<CardContainer>
+					<CardContainer  initial={{ opacity: 0 }} // 초기 불투명도를 0으로 설정
+        animate={{ opacity: card.img ? 1 : 0 }} // showImage 값에 따라 불투명도 조절
+        transition={{ duration: 0.5 }}   >
 						<img src={card.img} alt={card.name} />
 					</CardContainer>
 					<CardContainer marginLeft>
@@ -38,7 +40,13 @@ export const Result = () => {
 						<div>
 							<p>게이지</p>
 							<ScoreGaugeOut>
-								<ScoreGaugeIn percent={card.score} />
+								<ScoreGaugeIn
+									percent={card.score}
+									initial={{ width: 0 }}
+									animate={{ width: card.score ? '200px' : '0px' }}
+									exit={{ width: '0px' }}
+									transition={{ duration: 1 }}
+								/>
 							</ScoreGaugeOut>
 							<GaugeText>
 								<Text>나쁨</Text> <Text>보통</Text> <Text>좋음</Text>
@@ -55,7 +63,9 @@ export const Result = () => {
 					</CardContainer>
 				</Container>
 				<ButtonContainer>
-					<Button onClick={goToStart}>다시하기</Button>
+					<Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={goToStart}>
+						다시하기
+					</Button>
 				</ButtonContainer>
 			</Box>
 		</BackgroundBlur>
@@ -91,7 +101,7 @@ const ButtonContainer = styled.div`
 `;
 
 // 카드 내용
-const CardContainer = styled.div`
+const CardContainer = styled(motion.div)`
 	font-family: Jua;
 	font-size: 18px;
 	display: flex;
@@ -118,7 +128,7 @@ const ScoreGaugeOut = styled.div`
 	align-items: center;
 `;
 
-const ScoreGaugeIn = styled.div`
+const ScoreGaugeIn = styled(motion.div)`
 	width: ${(props) => props?.percent}%;
 	height: 14px;
 	flex-shrink: 0;

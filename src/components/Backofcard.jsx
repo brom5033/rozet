@@ -2,17 +2,21 @@ import React from 'react';
 import styled from '@emotion/styled';
 import backgroundCard from '../assets/background_card.svg';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 
 export const Backofcard = (props) => {
-	return <Image onClick={props.onClick} src={backgroundCard} alt="backofcard" />;
+	return <Image onClick={props.onClick} src={backgroundCard} alt="backofcard" layout />;
 };
 
-const Image = styled.img`
+const Image = styled(motion.img)`
 	width: 80px;
 	height: 130px;
 	box-shadow:
 		0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
 		0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+		:hover{
+			cursor: pointer;
+		}
 `;
 
 Backofcard.propTypes = {
