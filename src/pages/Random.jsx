@@ -39,7 +39,7 @@ export const Random = () => {
 			<Box>
 				<Container>
 					{mixedCard.map((card) => {
-						return <Backofcard onClick={() => goToResult(card.name)} key={card.name} />;
+						return <Backofcard  onClick={() => goToResult(card.name)} key={card.name} />;
 					})}
 				</Container>
 				<ButtonContainer>
