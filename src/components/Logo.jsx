@@ -8,4 +8,7 @@ export const Logo = () => {
 const Image = styled.img`
 	width: 230px;
 	height: 60px;
+	:hover{
+		cursor: pointer;
+	}
 `;

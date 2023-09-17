@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
 	border-radius: 20px;
 	border: 2px solid #8c8581;
 	background: #8c8581;
@@ -14,4 +15,7 @@ export const Button = styled.button`
 	line-height: normal;
   padding: 20px 35px;
 	white-space : nowrap;
+	:hover{
+		cursor: pointer;
+	}
 `;

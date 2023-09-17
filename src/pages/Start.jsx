@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Background } from '../components/Background';
 import { Logo } from '../components/Logo';
 import { Button } from '../components/Button';
+import { motion } from "framer-motion"
 
 
 export const Start = () => {
@@ -11,6 +12,7 @@ export const Start = () => {
 	const goToRandom = () => {
 		navigate("/randomcard")
 	}
+
 	return (
 		<>
 			<BackgroundWrap>
@@ -20,8 +22,10 @@ export const Start = () => {
 				<LogoWrap>
 					<Logo />
 				</LogoWrap>
-				<ButtonWrap>
-					<Button onClick={goToRandom}>오늘의운세 확인하기</Button>
+				<ButtonWrap > 
+					<Button     whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }} onClick={goToRandom}>오늘의운세 확인하기</Button>
+					
 				</ButtonWrap>
 				<GithubWrap>
 					<GithubLink href="https://github.com/brom5033/rozet" target="_blank">
@@ -57,7 +61,7 @@ const LogoWrap = styled.div`
 	margin-top: 24px;
 `;
 
-const ButtonWrap = styled.div`
+const ButtonWrap = styled(motion.div)`
 	position: absolute;
 	top: 50%;
 	left: 50%;
