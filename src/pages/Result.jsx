@@ -35,8 +35,8 @@ export const Result = () => {
 			</LogoWrap>
 			<Box>
 				<Container>
-					<CardWrap  initial={{ opacity: 0 }} // 초기 불투명도를 0으로 설정
-        animate={{ opacity: card.img ? 1 : 0 }} // showImage 값에 따라 불투명도 조절
+					<CardWrap  initial={{ opacity: 0 }}
+        animate={{ opacity: card.img ? 1 : 0 }}
         transition={{ duration: 0.5 }}   >
 						<img src={card.img} alt={card.name} />
 					</CardWrap>
@@ -139,7 +139,6 @@ const ProgressBar = styled(motion.div)`
 	flex-shrink: 0;
 	border-radius: 45px;
 	background: #242840;
-	/* margin-left: 8px; */
 `;
 
 const Text = styled.p`
