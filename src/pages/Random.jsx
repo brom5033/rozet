@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
+
 // stores
 import { cardState } from '../stores/card';
+
 //utils
 import { mixArray } from '../utils/mixArray';
+
 // components
 import { BackgroundBlur } from '../components/BackgroundBlur';
 import { Logo } from '../components/Logo';
@@ -14,15 +17,17 @@ import { Box } from '../components/Box';
 import { Backofcard } from '../components/Backofcard';
 
 // constants
-import { cardDatas} from '../constants/cardDatas';
+import { cardDatas } from '../constants/cardDatas';
 
 export const Random = () => {
 	const setCard = useSetRecoilState(cardState);
+
 	const randomCards = mixArray(cardDatas);
 	const [mixedCards, setMixedCards] = useState(randomCards);
 	const mixCard = () => {
 		setMixedCards(mixArray([...mixedCards]));
 	};
+
 	const navigate = useNavigate();
 	const goToResult = (cardName) => {
 		setCard(cardName);
@@ -31,6 +36,7 @@ export const Random = () => {
 	const goToStart = () => {
 		navigate('/');
 	};
+	
 	return (
 		<BackgroundBlur>
 			<LogoWrap onClick={goToStart}>
