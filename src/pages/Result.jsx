@@ -38,7 +38,7 @@ export const Result = () => {
 					<CardContainer marginLeft>
 						<h1>{card.name}</h1>
 						<div>
-							<p>게이지</p>
+							<p>오늘의 점수 ({card.score}점)</p>
 							<ScoreGaugeOut>
 								<ScoreGaugeIn
 									percent={card.score}
