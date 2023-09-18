@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
-
 // stores
 import { cardState } from '../stores/card';
-
+//utils
+import { mixArray } from '../utils/mixArray';
 // components
 import { BackgroundBlur } from '../components/BackgroundBlur';
 import { Logo } from '../components/Logo';
@@ -18,10 +18,10 @@ import { cardDatas} from '../constants/cardDatas';
 
 export const Random = () => {
 	const setCard = useSetRecoilState(cardState);
-	const randomCards = cardDatas.sort(() => Math.random() - 0.5);
+	const randomCards = mixArray(cardDatas);
 	const [mixedCards, setMixedCards] = useState(randomCards);
 	const mixCard = () => {
-		setMixedCards([...mixedCards.sort(() => Math.random() - 0.5)]);
+		setMixedCards(mixArray([...mixedCards]));
 	};
 	const navigate = useNavigate();
 	const goToResult = (cardName) => {
