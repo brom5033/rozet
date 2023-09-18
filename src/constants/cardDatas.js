@@ -1,4 +1,4 @@
-export const cardData = [
+export const cardDatas = [
 	{
 		name: 'Fool (어리석음)',
 		keyword: '무모함, 새로운 시작, 자유로움',

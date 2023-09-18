@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 // store
 import { cardState } from '../stores/card';
 //constants
-import { cardData } from '../constants/cardData';
+import { cardDatas } from '../constants/cardDatas';
 // utils
 import { findCard } from '../utils/findCard';
 // components
@@ -17,7 +17,7 @@ import { Box } from '../components/Box';
 
 export const Result = () => {
 	const cardName = useRecoilValue(cardState);
-	const card = findCard(cardData, cardName)[0];
+	const card = findCard(cardDatas, cardName)[0];
 	const navigate = useNavigate();
 	const goToStart = () => {
 		navigate('/');
@@ -25,32 +25,32 @@ export const Result = () => {
 
 	return (
 		<BackgroundBlur>
-			<LogoContainer  onClick={goToStart}>
+			<LogoWrap  onClick={goToStart}>
 				<Logo />
-			</LogoContainer>
+			</LogoWrap>
 			<Box>
 				<Container>
-					<CardContainer  initial={{ opacity: 0 }} // 초기 불투명도를 0으로 설정
+					<CardWrap  initial={{ opacity: 0 }} // 초기 불투명도를 0으로 설정
         animate={{ opacity: card.img ? 1 : 0 }} // showImage 값에 따라 불투명도 조절
         transition={{ duration: 0.5 }}   >
 						<img src={card.img} alt={card.name} />
-					</CardContainer>
-					<CardContainer marginLeft>
+					</CardWrap>
+					<CardWrap marginLeft>
 						<h1>{card.name}</h1>
 						<div>
 							<p>오늘의 점수 ({card.score}점)</p>
-							<ScoreGaugeOut>
-								<ScoreGaugeIn
+							<Progress>
+								<ProgressBar
 									percent={card.score}
 									initial={{ width: 0 }}
 									animate={{ width: card.score ? '200px' : '0px' }}
 									exit={{ width: '0px' }}
 									transition={{ duration: 1 }}
 								/>
-							</ScoreGaugeOut>
-							<GaugeText>
+							</Progress>
+							<ProgressLabel>
 								<Text>나쁨</Text> <Text>보통</Text> <Text>좋음</Text>
-							</GaugeText>
+							</ProgressLabel>
 						</div>
 						<div>
 							<p>키워드</p>
@@ -60,19 +60,19 @@ export const Result = () => {
 							<p>상세설명</p>
 							<p>{card.description}</p>
 						</div>
-					</CardContainer>
+					</CardWrap>
 				</Container>
-				<ButtonContainer>
+				<ButtonWrap>
 					<Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={goToStart}>
 						다시하기
 					</Button>
-				</ButtonContainer>
+				</ButtonWrap>
 			</Box>
 		</BackgroundBlur>
 	);
 };
 
-const LogoContainer = styled.div`
+const LogoWrap = styled.div`
 	display: flex;
 	justify-content: center;
 	padding-top: 12px;
@@ -94,14 +94,14 @@ const Container = styled.div`
 	}
 `;
 
-const ButtonContainer = styled.div`
+const ButtonWrap = styled.div`
 	display: flex;
 	justify-content: center;
 	padding-top: 80px;
 `;
 
 // 카드 내용
-const CardContainer = styled(motion.div)`
+const CardWrap = styled(motion.div)`
 	font-family: Jua;
 	font-size: 18px;
 	display: flex;
@@ -113,12 +113,12 @@ const CardContainer = styled(motion.div)`
 	}
 `;
 // 게이지
-const GaugeText = styled.div`
+const ProgressLabel = styled.div`
 	display: flex;
 	justify-content: space-around;
 `;
 
-const ScoreGaugeOut = styled.div`
+const Progress = styled.div`
 	background-color: #8c8581;
 	border-radius: 45px;
 	width: 305px;
@@ -128,7 +128,7 @@ const ScoreGaugeOut = styled.div`
 	align-items: center;
 `;
 
-const ScoreGaugeIn = styled(motion.div)`
+const ProgressBar = styled(motion.div)`
 	width: ${(props) => props?.percent}%;
 	height: 14px;
 	flex-shrink: 0;

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
-
 // stores
 import { cardState } from '../stores/card';
-
+//utils
+import { mixArray } from '../utils/mixArray';
 // components
 import { BackgroundBlur } from '../components/BackgroundBlur';
 import { Logo } from '../components/Logo';
@@ -14,18 +14,18 @@ import { Box } from '../components/Box';
 import { Backofcard } from '../components/Backofcard';
 
 // constants
-import { cardData } from '../constants/cardData';
+import { cardDatas} from '../constants/cardDatas';
 
 export const Random = () => {
-	const cardSet = useSetRecoilState(cardState);
-	const randomCard = cardData.sort(() => Math.random() - 0.5);
-	const [mixedCard, setMixedCard] = useState(randomCard);
+	const setCard = useSetRecoilState(cardState);
+	const randomCards = mixArray(cardDatas);
+	const [mixedCards, setMixedCards] = useState(randomCards);
 	const mixCard = () => {
-		setMixedCard([...mixedCard.sort(() => Math.random() - 0.5)]);
+		setMixedCards(mixArray([...mixedCards]));
 	};
 	const navigate = useNavigate();
 	const goToResult = (cardName) => {
-		cardSet(cardName);
+		setCard(cardName);
 		navigate('/result');
 	};
 	const goToStart = () => {
@@ -33,26 +33,26 @@ export const Random = () => {
 	};
 	return (
 		<BackgroundBlur>
-			<LogoContainer onClick={goToStart}>
+			<LogoWrap onClick={goToStart}>
 				<Logo />
-			</LogoContainer>
+			</LogoWrap>
 			<Box>
-				<Container>
-					{mixedCard.map((card) => {
+				<CardWrap>
+					{mixedCards.map((card) => {
 						return <Backofcard onClick={() => goToResult(card.name)} key={card.name} />;
 					})}
-				</Container>
-				<ButtonContainer>
+				</CardWrap>
+				<ButtonWrap>
 					<Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={mixCard}>
 						다시섞기
 					</Button>
-				</ButtonContainer>
+				</ButtonWrap>
 			</Box>
 		</BackgroundBlur>
 	);
 };
 
-const Container = styled.div`
+const CardWrap = styled.div`
 	width: 710px;
 	height: 600px;
 	display: flex;
@@ -67,13 +67,13 @@ const Container = styled.div`
 	}
 `;
 
-const ButtonContainer = styled.div`
+const ButtonWrap = styled.div`
 	display: flex;
 	justify-content: center;
 	margin-top: 80px;
 `;
 
-const LogoContainer = styled.div`
+const LogoWrap = styled.div`
 	display: flex;
 	justify-content: center;
 	padding-top: 12px;
