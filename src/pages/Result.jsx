@@ -3,12 +3,16 @@ import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { motion } from 'framer-motion';
+
 // store
 import { cardState } from '../stores/card';
+
 //constants
 import { cardDatas } from '../constants/cardDatas';
+
 // utils
 import { findCard } from '../utils/findCard';
+
 // components
 import { BackgroundBlur } from '../components/BackgroundBlur';
 import { Logo } from '../components/Logo';
@@ -17,7 +21,8 @@ import { Box } from '../components/Box';
 
 export const Result = () => {
 	const cardName = useRecoilValue(cardState);
-	const card = findCard(cardDatas, cardName)[0];
+	const card = findCard(cardDatas, cardName);
+
 	const navigate = useNavigate();
 	const goToStart = () => {
 		navigate('/');
