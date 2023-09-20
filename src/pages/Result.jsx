@@ -30,15 +30,21 @@ export const Result = () => {
 
 	return (
 		<BackgroundBlur>
-			<LogoWrap  onClick={goToStart}>
+			<LogoWrap onClick={goToStart}>
 				<Logo />
 			</LogoWrap>
 			<Box>
 				<Container>
-					<CardWrap  initial={{ opacity: 0 }}
-        animate={{ opacity: card.img ? 1 : 0 }}
-        transition={{ duration: 0.5 }}   >
-						<img src={card.img} alt={card.name} />
+					<CardWrap
+						initial={{ opacity: 0 }}
+						animate={{ opacity: card.img ? 1 : 0 }}
+						transition={{ duration: 0.5 }}
+					>
+						<picture>
+							<source srcSet={`${card.img}.webp`} type="image/webp" />
+							<source srcSet={`${card.img}.png`} type="image/png" />
+							<img src={`${card.img}.png`} alt={card.name} />
+						</picture>
 					</CardWrap>
 					<CardWrap marginLeft>
 						<h1>{card.name}</h1>
