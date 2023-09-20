@@ -2,18 +2,23 @@
 
 타로카드로 오늘의 운세를 확인할수 있습니다.
 
+<img src="webpage.png" alt="rozet"/>
+
 ## Requirement
+
 ```
 javascript, react, vite, prettier, Eslint, babel, core-js, recoil, framer-motion, commitlint, husky, lint-stage
 ```
 
-## How to run? 
+## How to run?
+
 ```bash
 npm install
 npm run dev
 ```
 
 ## Project structure
+
 ```
 $ tree
 ├─public
@@ -28,6 +33,7 @@ $ tree
 ```
 
 ## Commit rule
+
 ```
 feat        새로운 기능을 제공합니다.
 fix         버그 수정.
