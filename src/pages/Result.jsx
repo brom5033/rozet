@@ -43,7 +43,7 @@ export const Result = () => {
 						<picture>
 							<source srcSet={`${card.img}.webp`} type="image/webp" />
 							<source srcSet={`${card.img}.png`} type="image/png" />
-							<img src={`${card.img}.png`} alt={card.name} />
+							<img src={`${card.img}.png`} alt={card.name} width='296px' height='504px' />
 						</picture>
 					</CardWrap>
 					<CardWrap marginLeft>
@@ -54,7 +54,7 @@ export const Result = () => {
 								<ProgressBar
 									percent={card.score}
 									initial={{ width: 0 }}
-									animate={{ width: card.score ? '200px' : '0px' }}
+									animate={{ width: card.score ? `${card.score}%` : '0px' }}
 									exit={{ width: '0px' }}
 									transition={{ duration: 1 }}
 								/>
