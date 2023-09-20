@@ -4,20 +4,20 @@ import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 
 // stores
-import { cardState } from '../stores/card';
+import { cardState } from '@stores/card';
 
 //utils
-import { mixArray } from '../utils/mixArray';
+import { mixArray } from '@utils/mixArray';
 
 // components
-import { BackgroundBlur } from '../components/BackgroundBlur';
-import { Logo } from '../components/Logo';
-import { Button } from '../components/Button';
-import { Box } from '../components/Box';
-import { Backofcard } from '../components/Backofcard';
+import { BackgroundBlur } from '@components/BackgroundBlur';
+import { Logo } from '@components/Logo';
+import { Button } from '@components/Button';
+import { Box } from '@components/Box';
+import { Backofcard } from '@components/Backofcard';
 
 // constants
-import { cardDatas } from '../constants/cardDatas';
+import { cardDatas } from '@constants/cardDatas';
 
 export const Random = () => {
 	const setCard = useSetRecoilState(cardState);
