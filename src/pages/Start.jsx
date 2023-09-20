@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 //components
-import { Background } from '../components/Background';
-import { Logo } from '../components/Logo';
-import { Button } from '../components/Button';
+import { Background } from '@components/Background';
+import { Logo } from '@components/Logo';
+import { Button } from '@components/Button';
 
 
 export const Start = () => {
