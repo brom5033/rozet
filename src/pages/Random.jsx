@@ -3,19 +3,12 @@ import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import { motion } from 'framer-motion';
-
 // stores
 import { cardState } from '@stores/card';
-
 //utils
 import { mixArray } from '@utils/mixArray';
-
 // components
-import { Logo } from '@components/Logo';
-import { Button } from '@components/Button';
-import { Box } from '@components/Box';
-import { Backofcard } from '@components/Backofcard';
-
+import { Logo, Button, Box, Backofcard } from '@components/index';
 // constants
 import { cardDatas } from '@constants/cardDatas';
 

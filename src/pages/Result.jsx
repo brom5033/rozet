@@ -3,21 +3,14 @@ import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { motion } from 'framer-motion';
-
 // store
 import { cardState } from '@stores/card';
-
 //constants
 import { cardDatas } from '@constants/cardDatas';
-
 // utils
 import { findCard } from '@utils/findCard';
-
 // components
-import { BackgroundBlur } from '@components/BackgroundBlur';
-import { Logo } from '@components/Logo';
-import { Button } from '@components/Button';
-import { Box } from '@components/Box';
+import { BackgroundBlur, Logo, Button, Box } from '@components/index';
 
 export const Result = () => {
 	const cardName = useRecoilValue(cardState);
