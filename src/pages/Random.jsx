@@ -8,7 +8,7 @@ import { cardState } from '@stores/card';
 //utils
 import { mixArray } from '@utils/mixArray';
 // components
-import { Logo, Button, Box, Backofcard } from '@components/index';
+import { Logo, Button, Box, Backofcard, LogoWrap } from '@components/index';
 // constants
 import { cardDatas } from '@constants/cardDatas';
 
@@ -88,11 +88,4 @@ const ButtonWrap = styled.div`
 	display: flex;
 	justify-content: center;
 	margin-top: 80px;
-`;
-
-const LogoWrap = styled.div`
-	display: flex;
-	justify-content: center;
-	padding-top: 12px;
-	padding-bottom: 12px;
 `;

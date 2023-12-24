@@ -6,3 +6,4 @@ export * from './Button';
 export * from './Logo';
 export * from './MainContainer';
 export * from './MouseTrail';
+export * from './LogoWrap';

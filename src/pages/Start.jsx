@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 //components
-import { Background, Logo, Button } from '@components/index';
+import { Background, Logo, Button, LogoWrap } from '@components/index';
 
 export const Start = () => {
 	const navigate = useNavigate();
@@ -54,12 +54,6 @@ backdrop-filter: blur( 17px );
 -webkit-backdrop-filter: blur( 17px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
-`;
-
-const LogoWrap = styled.div`
-	display: flex;
-	justify-content: center;
-	margin-top: 24px;
 `;
 
 const ButtonWrap = styled(motion.div)`

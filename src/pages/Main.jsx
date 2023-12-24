@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 // components
-import { Logo, Button, MainContainer } from '@components/index';
+import { Logo, Button, MainContainer, LogoWrap } from '@components/index';
 
 export const Main = () => {
 	const navigate = useNavigate();
@@ -44,11 +44,6 @@ export const Main = () => {
 		</MainContainer>
 	);
 };
-
-const LogoWrap = styled.div`
-	display: flex;
-	justify-content: center;
-`;
 
 const BannerImg = styled.img`
 	width: 100%;

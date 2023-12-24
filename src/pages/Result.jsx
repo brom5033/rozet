@@ -10,7 +10,7 @@ import { cardDatas } from '@constants/cardDatas';
 // utils
 import { findCard } from '@utils/findCard';
 // components
-import { BackgroundBlur, Logo, Button, Box } from '@components/index';
+import { BackgroundBlur, Logo, Button, Box, LogoWrap } from '@components/index';
 
 export const Result = () => {
 	const cardName = useRecoilValue(cardState);
@@ -75,13 +75,6 @@ export const Result = () => {
 		</BackgroundBlur>
 	);
 };
-
-const LogoWrap = styled.div`
-	display: flex;
-	justify-content: center;
-	padding-top: 12px;
-	padding-bottom: 12px;
-`;
 
 const Container = styled.div`
 	width: 710px;
