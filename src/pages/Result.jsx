@@ -43,7 +43,7 @@ export const Result = () => {
 						<picture>
 							<source srcSet={`${card.img}.webp`} type="image/webp" />
 							<source srcSet={`${card.img}.png`} type="image/png" />
-							<img src={`${card.img}.png`} alt={card.name} width='296px' height='504px' />
+							<img src={`${card.img}.png`} alt={card.name} width="200px" height="330px" />
 						</picture>
 					</CardWrap>
 					<CardWrap marginLeft>
@@ -63,9 +63,9 @@ export const Result = () => {
 								<Text>나쁨</Text> <Text>보통</Text> <Text>좋음</Text>
 							</ProgressLabel>
 						</div>
-						<div>
+						<div style={{ marginLeft: '24px' }}>
 							<p>키워드</p>
-							<p>{card.keyword}</p>
+							<strong>{card.keyword}</strong>
 						</div>
 						<div>
 							<p>상세설명</p>
@@ -92,7 +92,7 @@ const LogoWrap = styled.div`
 
 const Container = styled.div`
 	width: 710px;
-	height: 600px;
+	height: auto;
 	display: flex;
 	gap: 10px;
 	justify-content: center;
@@ -108,7 +108,6 @@ const Container = styled.div`
 const ButtonWrap = styled.div`
 	display: flex;
 	justify-content: center;
-	padding-top: 80px;
 `;
 
 // 카드 내용

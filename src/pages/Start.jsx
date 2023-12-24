@@ -8,11 +8,10 @@ import { Background } from '@components/Background';
 import { Logo } from '@components/Logo';
 import { Button } from '@components/Button';
 
-
 export const Start = () => {
 	const navigate = useNavigate();
-	const goToRandom = () => {
-		navigate('/randomcard');
+	const goToMain = () => {
+		navigate('/main');
 	};
 
 	return (
@@ -25,8 +24,8 @@ export const Start = () => {
 					<Logo />
 				</LogoWrap>
 				<ButtonWrap>
-					<Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={goToRandom}>
-						오늘의운세 확인하기
+					<Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={goToMain}>
+						시작하기
 					</Button>
 				</ButtonWrap>
 				<GithubWrap>
@@ -52,9 +51,12 @@ const Right = styled.div`
 	width: 400px;
 	height: 80vh;
 	transform: translate(0, -115%);
-	background-color: #fff;
-	border-radius: 15px 0px 0px 15px;
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 17px );
+-webkit-backdrop-filter: blur( 17px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 `;
 
 const LogoWrap = styled.div`
@@ -75,6 +77,9 @@ const GithubWrap = styled.div`
 	right: 24px;
 	bottom: 24px;
 	text-align: right;
+	border: 1px solid black;
+	padding: 4px 8px;
+	border-radius: 8px;
 `;
 
 const GithubLink = styled.a`

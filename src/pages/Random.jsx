@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
+import { motion } from 'framer-motion';
 
 // stores
 import { cardState } from '@stores/card';
@@ -10,7 +11,6 @@ import { cardState } from '@stores/card';
 import { mixArray } from '@utils/mixArray';
 
 // components
-import { BackgroundBlur } from '@components/BackgroundBlur';
 import { Logo } from '@components/Logo';
 import { Button } from '@components/Button';
 import { Box } from '@components/Box';
@@ -25,7 +25,7 @@ export const Random = () => {
 	const randomCards = mixArray(cardDatas);
 	const [mixedCards, setMixedCards] = useState(randomCards);
 	const mixCard = () => {
-		setMixedCards(mixArray([...mixedCards]));
+		;
 	};
 
 	const navigate = useNavigate();
@@ -36,9 +36,30 @@ export const Random = () => {
 	const goToStart = () => {
 		navigate('/');
 	};
-	
+
+	const [color, setColor] = useState('#000000'); 
+
+	const generateRandomColor = () => {
+		// 랜덤 색상을 생성하는 함수
+		const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+		return randomColor;
+	};
+
+	const changeColor = () => {
+    const newColor = generateRandomColor();
+    setColor(newColor);
+		setMixedCards(mixArray([...mixedCards]))
+  };
+
 	return (
-		<BackgroundBlur>
+		<motion.div
+		style={{
+			width: '100vw',
+			height: '100vh',
+			backgroundColor: color,
+		}}
+		animate={{ backgroundColor: color }}
+		transition={{ duration: 1 }}>
 			<LogoWrap onClick={goToStart}>
 				<Logo />
 			</LogoWrap>
@@ -49,18 +70,18 @@ export const Random = () => {
 					})}
 				</CardWrap>
 				<ButtonWrap>
-					<Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={mixCard}>
+					<Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={changeColor}>
 						다시섞기
 					</Button>
 				</ButtonWrap>
 			</Box>
-		</BackgroundBlur>
+		</motion.div>
 	);
 };
 
 const CardWrap = styled.div`
 	width: 710px;
-	height: 600px;
+	height: auto;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;

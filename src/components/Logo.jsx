@@ -3,18 +3,13 @@ import styled from '@emotion/styled';
 
 export const Logo = () => {
 	return (
-		<picture>
-			<source srcSet="/rozet/images/logo.webp" type="image/webp" />
-			<source srcSet="/rozet/images/logo.png" type="image/png" />
-			<Image width="230px" height="65px" src="/rozet/images/logo.png" alt="rozet logo" />
-		</picture>
+			<LogoText>ROZET</LogoText>
 	);
 };
 
-const Image = styled.img`
-	width: 230px;
-	height: auto;
-	:hover {
-		cursor: pointer;
-	}
+const LogoText = styled.p`
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 42px;
+	font-weight: bold;
+	color: #fff;
 `;
