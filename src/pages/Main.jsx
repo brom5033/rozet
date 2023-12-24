@@ -14,11 +14,14 @@ export const Main = () => {
 	const goToDetail = () => {
 		navigate('/detail');
 	};
+	const goToStart = () => {
+		navigate('/');
+	};
 
 	return (
 		<MainContainer>
 			<div>
-				<LogoWrap>
+				<LogoWrap onClick={goToStart}>
 					<Logo />
 				</LogoWrap>
 				<ImgWrap>
