@@ -3,11 +3,8 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
-// assets
-import backgroundCard from '@assets/background_card.svg';
-
 export const Backofcard = (props) => {
-	return <Image onClick={props.onClick} src={backgroundCard} alt="backofcard" layout />;
+	return <Image onClick={props.onClick} src='/images/tarot-background2.jpg' alt="backofcard" layout />;
 };
 
 const Image = styled(motion.img)`
