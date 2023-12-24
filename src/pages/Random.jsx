@@ -24,9 +24,6 @@ export const Random = () => {
 
 	const randomCards = mixArray(cardDatas);
 	const [mixedCards, setMixedCards] = useState(randomCards);
-	const mixCard = () => {
-		;
-	};
 
 	const navigate = useNavigate();
 	const goToResult = (cardName) => {
