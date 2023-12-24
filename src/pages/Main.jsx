@@ -1,23 +1,18 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 // components
-import { Logo } from '@components/Logo';
-import { Button } from '@components/Button';
+import { Logo, Button, MainContainer } from '@components/index';
 
 export const Main = () => {
 	const navigate = useNavigate();
 	const goToRandom = () => {
 		navigate('/randomcard');
 	};
+
 	const goToDetail = () => {
 		navigate('/detail');
-	};
-
-	const myTargetRef = useRef<HTMLDivElement>(null);
-	const scrollToTarget = () => {
-		myTargetRef.current?.scrollIntoView({ behavior: 'smooth' });
 	};
 
 	return (
@@ -93,10 +88,4 @@ const MoveButtonWrap = styled(motion.div)`
 	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-`;
-
-const MainContainer = styled.div`
-	background-color: black;
-	min-height: 100vh;
-	width: 100%;
 `;
