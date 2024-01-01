@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 // components
-import { Logo, MainContainer, LogoWrap, Backofcard } from '@components/index';
+import { Logo, MainContainer, LogoWrap, CardMix } from '@components/index';
 
 export const Detail = () => {
 	const navigate = useNavigate();
@@ -21,9 +21,12 @@ export const Detail = () => {
 				<Image src="/images/tarot_women.jpg" alt="tarot_women" />
 				<TextWrap>
 					<Text>
-						타로에 대해 궁금하신가요? <br />
-						<TextColor>저를 따라오세요</TextColor>
+						타로에 대해 제가 알려드릴게요 <br />
+						<TextColor>우선 타로 셔플에 대해 먼저 구경해볼까요?</TextColor> <br />
 					</Text>
+					<Text>
+							아래의 카드를 <TextColor>클릭</TextColor>해주세요!
+						</Text>
 				</TextWrap>
 			</BannerWrap>
 			<div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -35,9 +38,10 @@ export const Detail = () => {
 						borderRadius: '100%',
 					}}
 				>
-					<Backofcard />
+					
 				</motion.div>
 			</div>
+			<CardMix />
 		</MainContainer>
 	);
 };
