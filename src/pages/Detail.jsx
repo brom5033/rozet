@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
@@ -13,43 +13,14 @@ export const Detail = () => {
 	};
 
 	const [isAnimating, setIsAnimating] = useState(false);
-	const imageRef = useRef(null); // 이미지 참조 생성
 
-	const handleImageClick = () => {
-		if (!isAnimating) {
-			setIsAnimating(true);
-	
-			const startY = window.scrollY;  // 초기 스크롤 위치
-			const endY = startY + 300;      // 이미지가 아래로 이동할 거리
-	
-			let currentTime = 0;
-	
-			// 스크롤 애니메이션 함수
-			const animateScroll = (duration) => {
-				currentTime += 1 / 60;  // 애니메이션 프레임 업데이트
-	
-				const progress = currentTime / duration;  // 진행률 계산
-				const val = easeInOutQuad(progress);  // 부드러운 애니메이션을 위한 이징 함수
-	
-				window.scrollTo(0, startY + (endY - startY) * val);
-	
-				if (currentTime < duration) {
-					requestAnimationFrame(() => animateScroll(duration));
-				}
-			};
-	
-			// 애니메이션 실행
-			animateScroll(2);  // 2초 동안 애니메이션 실행
-		} else {
-			setIsAnimating(false);
-		}
+	const handleCardClick = () => {
+		window.scrollBy({
+			top: window.innerHeight,
+			behavior: 'smooth'
+		});
+		setIsAnimating(true);
 	};
-	
-	// 이징 함수 예시 (부드러운 애니메이션을 위해)
-	function easeInOutQuad(t) {
-		return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-	}
-	
 
 	const variants = {
 		initial: {
@@ -57,8 +28,8 @@ export const Detail = () => {
 			y: 0,
 		},
 		animate: {
-			scale: 1.5, // 확대될 크기
-			y: 220, // 아래로 이동할 거리
+			scale: 1.5,
+			y: 220,
 		},
 	};
 
@@ -80,12 +51,11 @@ export const Detail = () => {
 				</TextWrap>
 				<CardWrap>
 					<AnimatedImage
-						ref={imageRef}
 						src="/images/tarot-background2.jpg"
 						alt="backofcard"
 						variants={variants}
 						animate={isAnimating ? 'animate' : 'initial'}
-						onClick={handleImageClick}
+						onClick={handleCardClick}
 					/>
 				</CardWrap>
 			</BannerWrap>
