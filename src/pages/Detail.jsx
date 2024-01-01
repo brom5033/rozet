@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 // components
-import { Logo, MainContainer, LogoWrap, CardMix } from '@components/index';
+import { Logo, MainContainer, LogoWrap, CardShuffle } from '@components/index';
 
 export const Detail = () => {
 	const navigate = useNavigate();
@@ -58,7 +58,7 @@ export const Detail = () => {
 		},
 		animate: {
 			scale: 1.5, // 확대될 크기
-			y: 300, // 아래로 이동할 거리
+			y: 220, // 아래로 이동할 거리
 		},
 	};
 
@@ -80,7 +80,7 @@ export const Detail = () => {
 				</TextWrap>
 				<CardWrap>
 					<AnimatedImage
-						ref={imageRef} // 참조 연결
+						ref={imageRef}
 						src="/images/tarot-background2.jpg"
 						alt="backofcard"
 						variants={variants}
@@ -99,7 +99,7 @@ export const Detail = () => {
 					}}
 				></motion.div>
 			</div>
-			<CardMix />
+			<CardShuffle />
 		</MainContainer>
 	);
 };

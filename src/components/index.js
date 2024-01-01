@@ -7,4 +7,4 @@ export * from './Logo';
 export * from './MainContainer';
 export * from './MouseTrail';
 export * from './LogoWrap';
-export * from './CardMix';
+export * from './CardShuffle';
