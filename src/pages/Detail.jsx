@@ -29,7 +29,7 @@ export const Detail = () => {
 		},
 		animate: {
 			scale: 1.5,
-			y: 220,
+			y: 0,
 		},
 	};
 
@@ -118,3 +118,4 @@ const AnimatedImage = styled(motion.img)`
 	width: 80px;
 	height: 130px;
 `;
+
