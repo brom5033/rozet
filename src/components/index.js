@@ -8,3 +8,4 @@ export * from './MainContainer';
 export * from './MouseTrail';
 export * from './LogoWrap';
 export * from './CardShuffle';
+export * from './ShuffleDetail';

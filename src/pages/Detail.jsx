@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 // components
-import { Logo, MainContainer, LogoWrap, CardShuffle } from '@components/index';
+import { Logo, MainContainer, LogoWrap, CardShuffle, ShuffleDetail } from '@components/index';
 
 export const Detail = () => {
 	const navigate = useNavigate();
@@ -70,6 +70,7 @@ export const Detail = () => {
 				></motion.div>
 			</div>
 			<CardShuffle />
+			<ShuffleDetail />
 		</MainContainer>
 	);
 };

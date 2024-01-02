@@ -31,7 +31,7 @@ export const CardShuffle = () => {
 	};
 
 	return (
-		<div style={{ height: '100vh', backgroundColor: 'black' }}>
+		<ConTainer>
 			<Box>
 				<CardWrap>
 					{cards.map((card) => (
@@ -50,9 +50,14 @@ export const CardShuffle = () => {
 					</Button>
 				</ButtonWrap>
 			</Box>
-		</div>
+		</ConTainer>
 	);
 };
+
+const ConTainer = styled.div`
+	height: '100vh';
+	background-color: 'black';
+`;
 
 const CardWrap = styled.div`
 	width: 710px;
