@@ -88,5 +88,5 @@ const CardWrap = styled.div`
 const ButtonWrap = styled.div`
 	display: flex;
 	justify-content: center;
-	margin-top: 80px;
+	margin-top: 40px;
 `;

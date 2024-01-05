@@ -8,8 +8,8 @@ export const Backofcard = (props) => {
 };
 
 const Image = styled(motion.img)`
-	width: 80px;
-	height: 130px;
+	width: 70px;
+	height: 120px;
 	box-shadow:
 		0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
 		0px 4px 4px 0px rgba(0, 0, 0, 0.25);

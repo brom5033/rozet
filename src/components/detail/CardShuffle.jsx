@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 // components
-import { Box, Button } from '@components/index';
+import { Box, Button, MainContainer } from '@components/index';
 
 export const CardShuffle = () => {
 	const initialCards = [...Array(22).keys()].map((k) => ({
@@ -31,7 +31,7 @@ export const CardShuffle = () => {
 	};
 
 	return (
-		<ConTainer>
+		<MainContainer>
 			<Box>
 				<CardWrap>
 					{cards.map((card) => (
@@ -50,14 +50,9 @@ export const CardShuffle = () => {
 					</Button>
 				</ButtonWrap>
 			</Box>
-		</ConTainer>
+		</MainContainer>
 	);
 };
-
-const ConTainer = styled.div`
-	height: '100vh';
-	background-color: 'black';
-`;
 
 const CardWrap = styled.div`
 	width: 710px;
@@ -77,7 +72,7 @@ const CardWrap = styled.div`
 const ButtonWrap = styled.div`
 	display: flex;
 	justify-content: center;
-	margin-top: 80px;
+	margin-top: 20px;
 `;
 
 const AnimatedCard = styled(motion.img)`

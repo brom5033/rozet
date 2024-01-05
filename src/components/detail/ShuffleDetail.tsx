@@ -22,11 +22,12 @@ export const ShuffleDetail = () => {
 						</motion.h1>
 						<p>
 							여기에서는 설명을 위한 페이지이기 때문에 카드를 선택해도
-							<TextColor> 결과화면으로 가지 않아요.</TextColor> 결과를 보고 싶다면 설명을 다 보신 후에
+							<TextColor> 결과화면으로 가지 않아요.</TextColor> <br /> 결과를 보고 싶다면 설명을 다 보신
+							후에
 							<TextColor> 직접 운세를 보셔야해요.</TextColor>
 						</p>
 						<p>
-							카드셔플에 대해 더 자세히 알고싶다면 밑에 버튼을 <TextColor>클릭</TextColor>해보세요!
+							더 자세히 알고싶다면 밑에 버튼을 <TextColor>클릭</TextColor>해보세요!
 						</p>
 					</TextWrap>
 					<ButtonWrap>
@@ -73,6 +74,7 @@ const TextWrap = styled.div`
 	align-items: center;
 	font-family: jua;
 	color: #f4f0f0;
+	text-align: center;
 `;
 
 const Button = styled.button`
@@ -92,6 +94,7 @@ const ButtonWrap = styled.div`
 
 const Item = styled.div`
 	padding: 100px;
+	background-color: #000;
 `;
 
 const TextColor = styled.span`
@@ -99,14 +102,17 @@ const TextColor = styled.span`
 `;
 
 const ButtonDetail = styled(motion.div)`
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-max-width: 800px;
-color: #cfcbcb;
-`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	max-width: 800px;
+	color: #cfcbcb;
+	margin: auto;
+	text-align: center;
+	padding: 0 20px;
+`;
 
 const H3 = styled.h3`
 	color: #d4beb0;
-`
+`;

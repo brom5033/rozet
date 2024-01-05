@@ -34,49 +34,43 @@ export const Detail = () => {
 	};
 
 	return (
-		<MainContainer>
-			<LogoWrap onClick={goToStart}>
-				<Logo />
-			</LogoWrap>
-			<BannerWrap>
-				<Image src="/images/tarot_women.jpg" alt="tarot_women" />
-				<TextWrap>
-					<Text>
-						타로에 대해 제가 알려드릴게요 <br />
-						<TextColor>우선 타로 셔플에 대해 먼저 구경해볼까요?</TextColor> <br />
-					</Text>
-					<Text>
-						아래의 카드를 <TextColor>클릭</TextColor>해주세요!
-					</Text>
-				</TextWrap>
-				<CardWrap>
-					<AnimatedImage
-						src="/images/tarot-background2.jpg"
-						alt="backofcard"
-						variants={variants}
-						animate={isAnimating ? 'animate' : 'initial'}
-						onClick={handleCardClick}
-					/>
-				</CardWrap>
-			</BannerWrap>
-			<div style={{ display: 'flex', justifyContent: 'center' }}>
-				<motion.div
-					whileHover={{ scale: 1.2, rotate: 90 }}
-					whileTap={{
-						scale: 0.9,
-						rotate: -90,
-						borderRadius: '100%',
-					}}
-				></motion.div>
+		<div style={{ backgroundColor: '#000' }}>
+			<MainContainer>
+				<LogoWrap onClick={goToStart}>
+					<Logo />
+				</LogoWrap>
+				<BannerWrap>
+					<Image src="/images/tarot_women.jpg" alt="tarot_women" />
+					<TextWrap>
+						<Text>
+							타로에 대해 제가 알려드릴게요 <br />
+							<TextColor>우선 타로 셔플에 대해 먼저 구경해볼까요?</TextColor> <br />
+						</Text>
+						<Text>
+							아래의 카드를 <TextColor>클릭</TextColor>해주세요!
+						</Text>
+					</TextWrap>
+					<CardWrap>
+						<AnimatedImage
+							src="/images/tarot-background2.jpg"
+							alt="backofcard"
+							variants={variants}
+							animate={isAnimating ? 'animate' : 'initial'}
+							onClick={handleCardClick}
+						/>
+					</CardWrap>
+				</BannerWrap>
+			</MainContainer>
+			<div style={{ marginTop: '60px' }}>
+				<CardShuffle />
 			</div>
-			<CardShuffle />
 			<ShuffleDetail />
-		</MainContainer>
+		</div>
 	);
 };
 
 const BannerWrap = styled.div`
-	height: auto;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 `;

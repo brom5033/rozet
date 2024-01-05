@@ -76,7 +76,7 @@ const TextWrap = styled.div`
 
 const ButtonWrap = styled(motion.div)`
 	position: absolute;
-	top: 70%;
+	top: 74%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 `;

@@ -7,9 +7,10 @@ export const Logo = () => {
 	);
 };
 
-const LogoText = styled.p`
+const LogoText = styled.div`
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 42px;
 	font-weight: bold;
 	color: #fff;
+	padding: 15px;
 `;
