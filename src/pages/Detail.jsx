@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
@@ -17,7 +17,7 @@ export const Detail = () => {
 	const handleCardClick = () => {
 		window.scrollBy({
 			top: window.innerHeight,
-			behavior: 'smooth'
+			behavior: 'smooth',
 		});
 		setIsAnimating(true);
 	};
@@ -119,4 +119,3 @@ const AnimatedImage = styled(motion.img)`
 	width: 80px;
 	height: 130px;
 `;
-

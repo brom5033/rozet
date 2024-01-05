@@ -11,7 +11,7 @@ export const ShuffleDetail = () => {
 };
 
 const Container = styled.div`
-height: 100vh;
-background-color: black;
-color: white;
-`
+	height: 100vh;
+	background-color: black;
+	color: white;
+`;

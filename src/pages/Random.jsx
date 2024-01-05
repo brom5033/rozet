@@ -27,29 +27,30 @@ export const Random = () => {
 		navigate('/');
 	};
 
-	const [color, setColor] = useState('#000000'); 
+	const [color, setColor] = useState('#000000');
 
 	const generateRandomColor = () => {
 		// 랜덤 색상을 생성하는 함수
-		const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+		const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
 		return randomColor;
 	};
 
 	const changeColor = () => {
-    const newColor = generateRandomColor();
-    setColor(newColor);
-		setMixedCards(mixArray([...mixedCards]))
-  };
+		const newColor = generateRandomColor();
+		setColor(newColor);
+		setMixedCards(mixArray([...mixedCards]));
+	};
 
 	return (
 		<motion.div
-		style={{
-			width: '100vw',
-			height: '100vh',
-			backgroundColor: color,
-		}}
-		animate={{ backgroundColor: color }}
-		transition={{ duration: 1 }}>
+			style={{
+				width: '100vw',
+				height: '100vh',
+				backgroundColor: color,
+			}}
+			animate={{ backgroundColor: color }}
+			transition={{ duration: 1 }}
+		>
 			<LogoWrap onClick={goToStart}>
 				<Logo />
 			</LogoWrap>

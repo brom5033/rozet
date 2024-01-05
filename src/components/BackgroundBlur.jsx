@@ -7,6 +7,6 @@ export const BackgroundBlur = styled.div`
 	background-image: url('/rozet/images/background-dark.jpg');
 	background-color: gray;
 	background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-size : cover;
+	background-repeat: no-repeat;
+	background-size: cover;
 `;
