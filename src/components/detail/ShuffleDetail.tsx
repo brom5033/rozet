@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styled from '@emotion/styled';
+// components
+import { MainContainer } from '../MainContainer';
 
 export const ShuffleDetail = () => {
 	const [showDescription, setShowDescription] = useState(false);
 
 	return (
-		<Container>
+		<MainContainer>
 			<TextWrap>
 				<motion.h1
 					initial={{ opacity: 0, y: -20 }}
@@ -38,15 +40,9 @@ export const ShuffleDetail = () => {
 					)}
 				</AnimatePresence>
 			</ButtonWrap>
-		</Container>
+		</MainContainer>
 	);
 };
-
-const Container = styled.div`
-	height: 100vh;
-	background-color: black;
-	color: white;
-`;
 
 const TextWrap = styled.div`
 	display: flex;

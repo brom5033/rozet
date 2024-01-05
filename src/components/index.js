@@ -5,6 +5,5 @@ export * from './Box';
 export * from './Button';
 export * from './Logo';
 export * from './MainContainer';
-export * from './MouseTrail';
 export * from './LogoWrap';
 export * from './detail';
