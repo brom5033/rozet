@@ -8,7 +8,13 @@ export const ShuffleDetail = () => {
 	return (
 		<Container>
 			<TextWrap>
-				<h1>카드 섞기를 충분히 해보셨나요?</h1>
+				<motion.h1
+					initial={{ opacity: 0, y: -20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 1, delay: 0.3 }}
+				>
+					카드 섞기를 충분히 해보셨나요?
+				</motion.h1>
 				<p>
 					여기에서는 설명을 위한 페이지이기 때문에 카드를 선택해도 결과화면으로 가지 않아요. 결과를 보고
 					싶다면 설명을 다 보신 후에 직접 운세를 보셔야해요.
