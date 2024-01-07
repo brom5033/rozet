@@ -14,4 +14,8 @@ export const Box = styled.div`
 	backdrop-filter: blur(17px);
 	-webkit-backdrop-filter: blur(17px);
 	border: 1px solid rgba(255, 255, 255, 0.18);
+	@media screen and (max-width: 767px) {
+		width: 100%;
+		height: auto;
+	}
 `;

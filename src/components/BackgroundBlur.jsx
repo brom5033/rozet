@@ -9,4 +9,7 @@ export const BackgroundBlur = styled.div`
 	background-blend-mode: multiply;
 	background-repeat: no-repeat;
 	background-size: cover;
+	@media screen and (max-width: 767px) {
+		height: auto;
+	}
 `;

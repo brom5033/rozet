@@ -42,15 +42,7 @@ export const Random = () => {
 	};
 
 	return (
-		<motion.div
-			style={{
-				width: '100vw',
-				height: '100vh',
-				backgroundColor: color,
-			}}
-			animate={{ backgroundColor: color }}
-			transition={{ duration: 1 }}
-		>
+		<MotionContainer animate={{ backgroundColor: color }} transition={{ duration: 1 }}>
 			<LogoWrap onClick={goToStart}>
 				<Logo />
 			</LogoWrap>
@@ -66,7 +58,7 @@ export const Random = () => {
 					</Button>
 				</ButtonWrap>
 			</Box>
-		</motion.div>
+		</MotionContainer>
 	);
 };
 
@@ -89,4 +81,13 @@ const ButtonWrap = styled.div`
 	display: flex;
 	justify-content: center;
 	margin-top: 40px;
+`;
+
+const MotionContainer = styled(motion.div)`
+	width: 100vw;
+	height: 100vh;
+	background-color: color;
+	@media screen and (max-width: 767px) {
+		height: auto;
+	}
 `;
