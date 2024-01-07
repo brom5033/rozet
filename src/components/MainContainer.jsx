@@ -5,4 +5,7 @@ export const MainContainer = styled.div`
 	min-height: 100%;
 	width: 100%;
 	height: 100vh;
+	@media screen and (max-width: 767px) {
+		height: auto;
+	}
 `;

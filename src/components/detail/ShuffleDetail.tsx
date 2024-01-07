@@ -82,6 +82,9 @@ const Button = styled.button`
 	background-color: #fcdef8;
 	width: 20%;
 	border-radius: 15%;
+	@media screen and (max-width: 767px) {
+		width: 40%;
+	}
 `;
 
 const ButtonWrap = styled.div`
@@ -95,6 +98,9 @@ const ButtonWrap = styled.div`
 const Item = styled.div`
 	padding: 100px;
 	background-color: #000;
+	@media screen and (max-width: 767px) {
+		padding: 15px;
+	}
 `;
 
 const TextColor = styled.span`
