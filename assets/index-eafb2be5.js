@@ -272,11 +272,10 @@ Error generating stack: `+i.message+`
 	@media screen and (max-width: 767px) {
 		height: auto;
 	}
-`,Cb=(e,t)=>e.filter(n=>n.name===t)[0],Eb=()=>{const e=jP(cS),t=Cb(fS,e),n=Hi(),r=()=>{n("/")};return k.jsxs(YM,{children:[k.jsx(qi,{onClick:r,children:k.jsx(Zi,{})}),k.jsxs(Pl,{children:[k.jsxs(kb,{children:[k.jsx(Om,{initial:{opacity:0},animate:{opacity:t.img?1:0},transition:{duration:.5},children:k.jsxs("picture",{children:[k.jsx("source",{srcSet:`${t.img}.webp`,type:"image/webp"}),k.jsx("source",{srcSet:`${t.img}.png`,type:"image/png"}),k.jsx("img",{src:`${t.img}.png`,alt:t.name,width:"200px",height:"330px"})]})}),k.jsxs(Om,{marginLeft:!0,children:[k.jsx("h1",{children:t.name}),k.jsxs("div",{children:[k.jsxs("p",{children:["오늘의 점수 (",t.score,"점)"]}),k.jsx(Lb,{children:k.jsx(Nb,{percent:t.score,initial:{width:0},animate:{width:t.score?`${t.score}%`:"0px"},exit:{width:"0px"},transition:{duration:1}})}),k.jsxs(Ab,{children:[k.jsx(Au,{children:"나쁨"})," ",k.jsx(Au,{children:"보통"})," ",k.jsx(Au,{children:"좋음"})]})]}),k.jsxs("div",{style:{marginLeft:"24px"},children:[k.jsx("p",{children:"키워드"}),k.jsx("strong",{children:t.keyword})]}),k.jsxs("div",{children:[k.jsx("p",{children:"상세설명"}),k.jsx("p",{children:t.description})]})]})]}),k.jsx(Pb,{children:k.jsx(yr,{whileHover:{scale:1.1},whileTap:{scale:.9},onClick:r,children:"다시하기"})})]})]})},kb=X.div`
+`,Cb=(e,t)=>e.filter(n=>n.name===t)[0],Eb=()=>{const e=jP(cS),t=Cb(fS,e),n=Hi(),r=()=>{n("/")};return k.jsxs(YM,{children:[k.jsx(qi,{onClick:r,children:k.jsx(Zi,{})}),k.jsxs(Pl,{children:[k.jsxs(kb,{children:[k.jsx(Om,{initial:{opacity:0},animate:{opacity:t.img?1:0},transition:{duration:.5},children:k.jsxs("picture",{children:[k.jsx("source",{srcSet:`${t.img}.webp`,type:"image/webp"}),k.jsx("source",{srcSet:`${t.img}.png`,type:"image/png"}),k.jsx("img",{src:`${t.img}.png`,alt:t.name,width:"200px",height:"330px"})]})}),k.jsxs(Om,{marginLeft:!0,children:[k.jsx("h1",{children:t.name}),k.jsxs("div",{children:[k.jsxs("p",{children:["오늘의 점수 (",t.score,"점)"]}),k.jsx(Lb,{children:k.jsx(Nb,{percent:t.score,initial:{width:0},animate:{width:t.score?`${t.score}%`:"0px"},exit:{width:"0px"},transition:{duration:1}})}),k.jsxs(Ab,{children:[k.jsx(Au,{children:"나쁨"})," ",k.jsx(Au,{children:"보통"})," ",k.jsx(Au,{children:"좋음"})]})]}),k.jsxs("div",{children:[k.jsx("p",{children:"상세설명"}),k.jsx("p",{children:t.description})]})]})]}),k.jsx(Pb,{children:k.jsx(yr,{whileHover:{scale:1.1},whileTap:{scale:.9},onClick:r,children:"다시하기"})})]})]})},kb=X.div`
 	width: 710px;
 	height: auto;
 	display: flex;
-	gap: 10px;
 	justify-content: center;
 	margin: auto;
 	margin-top: 80px;
@@ -328,6 +327,9 @@ Error generating stack: `+i.message+`
 `,bb=X.div`
 	display: flex;
 	justify-content: center;
+	@media screen and (max-width: 767px) {
+		height: 100vh;
+	}
 `,Db=X.div`
 	position: absolute;
 	top: 45%;
@@ -348,6 +350,9 @@ Error generating stack: `+i.message+`
 	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	@media screen and (max-width: 767px) {
+		top: 63%;
+	}
 `,$b=()=>{const e=Hi(),t=()=>{e("/")},n=()=>{e("/randomcard")},[r,o]=C.useState(!1),i=()=>{window.scrollBy({top:window.innerHeight,behavior:"smooth"}),o(!0)},s={initial:{scale:1,y:0},animate:{scale:1.5,y:0}};return k.jsxs("div",{style:{backgroundColor:"#000"},children:[k.jsxs(Al,{children:[k.jsx(qi,{onClick:t,children:k.jsx(Zi,{})}),k.jsxs(Fb,{children:[k.jsx(jb,{src:"/rozet/images/tarot_women.jpg",alt:"tarot_women"}),k.jsxs(Bb,{children:[k.jsxs($m,{children:["타로에 대해 제가 알려드릴게요 ",k.jsx("br",{}),k.jsx(Fm,{children:"우선 타로 셔플에 대해 먼저 구경해볼까요?"})," ",k.jsx("br",{})]}),k.jsxs($m,{children:["아래의 카드를 ",k.jsx(Fm,{children:"클릭"}),"해주세요!"]})]}),k.jsx(Ub,{children:k.jsx(zb,{src:"/rozet/images/tarot_background2.png",alt:"backofcard",variants:s,animate:r?"animate":"initial",onClick:i})})]})]}),k.jsx("div",{style:{marginTop:"60px"},children:k.jsx(rb,{})}),k.jsx(ab,{}),k.jsx(Wb,{onClick:n,children:k.jsx(yr,{children:"오늘의 운세 확인하기"})})]})},Fb=X.div`
 	height: 100vh;
 	display: flex;
