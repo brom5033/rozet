@@ -33,11 +33,7 @@ export const Result = () => {
 						animate={{ opacity: card.img ? 1 : 0 }}
 						transition={{ duration: 0.5 }}
 					>
-						<picture>
-							<source srcSet={`${card.img}.webp`} type="image/webp" />
-							<source srcSet={`${card.img}.png`} type="image/png" />
-							<img src={`${card.img}.png`} alt={card.name} width="200px" height="330px" />
-						</picture>
+							<img src={`${card.img}.jpg`} alt={card.name} width="200px" height="330px" />
 					</CardWrap>
 					<CardWrap marginLeft>
 						<h1>{card.name}</h1>
