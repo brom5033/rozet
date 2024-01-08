@@ -3,13 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 // components
-import { Logo, MainContainer, LogoWrap, CardShuffle, ShuffleDetail } from '@components/index';
+import { Logo, MainContainer, LogoWrap, CardShuffle, ShuffleDetail, Button } from '@components/index';
 
 export const Detail = () => {
 	const navigate = useNavigate();
 
 	const goToStart = () => {
 		navigate('/');
+	};
+
+	const goToRandom = () => {
+		navigate('/randomcard');
 	};
 
 	const [isAnimating, setIsAnimating] = useState(false);
@@ -65,6 +69,9 @@ export const Detail = () => {
 				<CardShuffle />
 			</div>
 			<ShuffleDetail />
+			<ButtonWrap onClick={goToRandom}>
+				<Button>오늘의 운세 확인하기</Button>
+			</ButtonWrap>
 		</div>
 	);
 };
@@ -112,4 +119,10 @@ const CardWrap = styled.div`
 const AnimatedImage = styled(motion.img)`
 	width: 80px;
 	height: 130px;
+`;
+
+const ButtonWrap = styled.div`
+	display: flex;
+	justify-content: center;
+	padding-bottom: 12px;
 `;
