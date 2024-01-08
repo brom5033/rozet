@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
 export const Backofcard = (props) => {
-	return <Image onClick={props.onClick} src="/images/tarot-background2.jpg" alt="backofcard" layout />;
+	return <Image onClick={props.onClick} src="/images/tarot_background2.png" alt="backofcard" layout />;
 };
 
 const Image = styled(motion.img)`

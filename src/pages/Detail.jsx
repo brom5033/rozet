@@ -56,7 +56,7 @@ export const Detail = () => {
 					</TextWrap>
 					<CardWrap>
 						<AnimatedImage
-							src="/images/tarot-background2.jpg"
+							src="/images/tarot_background2.png"
 							alt="backofcard"
 							variants={variants}
 							animate={isAnimating ? 'animate' : 'initial'}
