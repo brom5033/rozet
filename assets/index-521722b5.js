@@ -153,7 +153,7 @@ Error generating stack: `+i.message+`
 	display: flex;
 	justify-content: center;
 	cursor: pointer;
-`,rb=()=>{const e=[...Array(22).keys()].map(o=>({id:o,x:0,y:0,rotate:0})),[t,n]=C.useState(e),r=()=>{const o=t.map(i=>({...i,x:Math.random()*100-50,y:Math.random()*100-50,rotate:Math.random()*360}));n(o),setTimeout(()=>{n(e)},1e3)};return k.jsx(Al,{children:k.jsxs(Pl,{children:[k.jsx(ob,{children:t.map(o=>k.jsx(sb,{src:"/images/tarot_background2.png",alt:"backofcard",animate:{x:o.x,y:o.y,rotate:o.rotate},transition:{type:"spring",stiffness:260,damping:20}},o.id))}),k.jsx(ib,{children:k.jsx(yr,{whileHover:{scale:1.1},whileTap:{scale:.9},onClick:r,children:"다시섞기"})})]})})},ob=X.div`
+`,rb=()=>{const e=[...Array(22).keys()].map(o=>({id:o,x:0,y:0,rotate:0})),[t,n]=C.useState(e),r=()=>{const o=t.map(i=>({...i,x:Math.random()*100-50,y:Math.random()*100-50,rotate:Math.random()*360}));n(o),setTimeout(()=>{n(e)},1e3)};return k.jsx(Al,{children:k.jsxs(Pl,{children:[k.jsx(ob,{children:t.map(o=>k.jsx(sb,{src:"/rozet/images/tarot_background2.png",alt:"backofcard",animate:{x:o.x,y:o.y,rotate:o.rotate},transition:{type:"spring",stiffness:260,damping:20}},o.id))}),k.jsx(ib,{children:k.jsx(yr,{whileHover:{scale:1.1},whileTap:{scale:.9},onClick:r,children:"다시섞기"})})]})})},ob=X.div`
 	width: 710px;
 	height: auto;
 	display: flex;
