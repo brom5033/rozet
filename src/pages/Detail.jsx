@@ -44,7 +44,7 @@ export const Detail = () => {
 					<Logo />
 				</LogoWrap>
 				<BannerWrap>
-					<Image src="/images/tarot_women.jpg" alt="tarot_women" />
+					<Image src="/rozet/images/tarot_women.jpg" alt="tarot_women" />
 					<TextWrap>
 						<Text>
 							타로에 대해 제가 알려드릴게요 <br />

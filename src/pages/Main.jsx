@@ -25,7 +25,7 @@ export const Main = () => {
 					<Logo />
 				</LogoWrap>
 				<ImgWrap>
-					<BannerImg src="images/tarot-banner.png" alt="tarot-image" />
+					<BannerImg src="/rozet/images/tarot-banner.png" alt="tarot-image" />
 					<TextWrap>
 						<span style={{ color: '#ffffff' }}>타로 카드에 대해 </span>알고계신가요? <br />
 						이미 알고 계신다면 <span style={{ color: '#ffffff' }}>오늘의 운세를</span> <br />
