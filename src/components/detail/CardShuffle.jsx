@@ -37,7 +37,7 @@ export const CardShuffle = () => {
 					{cards.map((card) => (
 						<AnimatedCard
 							key={card.id}
-							src="/images/tarot_background2.png"
+							src="/rozet/images/tarot_background2.png"
 							alt="backofcard"
 							animate={{ x: card.x, y: card.y, rotate: card.rotate }}
 							transition={{ type: 'spring', stiffness: 260, damping: 20 }}
