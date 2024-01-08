@@ -22,6 +22,7 @@ export const Result = () => {
 	};
 
 	return (
+
 		<BackgroundBlur>
 			<LogoWrap onClick={goToStart}>
 				<Logo />
@@ -56,10 +57,6 @@ export const Result = () => {
 								<Text>나쁨</Text> <Text>보통</Text> <Text>좋음</Text>
 							</ProgressLabel>
 						</div>
-						<div style={{ marginLeft: '24px' }}>
-							<p>키워드</p>
-							<strong>{card.keyword}</strong>
-						</div>
 						<div>
 							<p>상세설명</p>
 							<p>{card.description}</p>
@@ -80,7 +77,6 @@ const Container = styled.div`
 	width: 710px;
 	height: auto;
 	display: flex;
-	gap: 10px;
 	justify-content: center;
 	margin: auto;
 	margin-top: 80px;

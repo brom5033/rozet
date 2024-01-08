@@ -60,6 +60,9 @@ const BannerImg = styled.img`
 const ImgWrap = styled.div`
 	display: flex;
 	justify-content: center;
+	@media screen and (max-width: 767px) {
+		height: 100vh;
+	}
 `;
 
 const TextWrap = styled.div`
@@ -86,4 +89,7 @@ const MoveButtonWrap = styled(motion.div)`
 	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	@media screen and (max-width: 767px) {
+		top: 63%;
+	}
 `;
