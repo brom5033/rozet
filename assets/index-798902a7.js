@@ -388,4 +388,4 @@ Error generating stack: `+i.message+`
 	display: flex;
 	justify-content: center;
 	padding-bottom: 12px;
-`,Hb=()=>k.jsx(VA,{children:k.jsxs(LA,{children:[k.jsx(kr,{path:"/",index:!0,element:k.jsx(hb,{})}),k.jsx(kr,{path:"/randomcard",element:k.jsx(xb,{})}),k.jsx(kr,{path:"/result",element:k.jsx(Eb,{})}),k.jsx(kr,{path:"/main",element:k.jsx(Vb,{})}),k.jsx(kr,{path:"/detail",element:k.jsx($b,{})})]})});Nu.createRoot(document.getElementById("root")).render(k.jsx(he.StrictMode,{children:k.jsx($P,{children:k.jsx(Hb,{})})}));
+`,Hb=()=>k.jsx(VA,{children:k.jsxs(LA,{children:[k.jsx(kr,{path:"/rozet",element:k.jsx(hb,{})}),k.jsx(kr,{path:"/randomcard",element:k.jsx(xb,{})}),k.jsx(kr,{path:"/result",element:k.jsx(Eb,{})}),k.jsx(kr,{path:"/main",element:k.jsx(Vb,{})}),k.jsx(kr,{path:"/detail",element:k.jsx($b,{})})]})});Nu.createRoot(document.getElementById("root")).render(k.jsx(he.StrictMode,{children:k.jsx($P,{children:k.jsx(Hb,{})})}));
