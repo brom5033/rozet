@@ -12,7 +12,7 @@ export const Router = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" index element={<Start />} />
+				<Route path="/rozet" element={<Start />} />
 				<Route path="/randomcard" element={<Random />} />
 				<Route path="/result" element={<Result />} />
 				<Route path="/main" element={<Main />} />
