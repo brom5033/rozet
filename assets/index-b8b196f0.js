@@ -80,7 +80,7 @@ Error generating stack: `+i.message+`
 	opacity: 0.9;
 `,YM=X.div`
 	width: 100%;
-	height: 100vh;
+	height: auto;
 	min-height: 100vh;
 	background-image: url('/rozet/images/background-dark.jpg');
 	background-color: gray;
@@ -267,11 +267,8 @@ Error generating stack: `+i.message+`
 	margin-top: 40px;
 `,Tb=X(Dt.div)`
 	width: 100vw;
-	height: 100vh;
+	height: auto;
 	background-color: color;
-	@media screen and (max-width: 767px) {
-		height: auto;
-	}
 `,Cb=(e,t)=>e.filter(n=>n.name===t)[0],Eb=()=>{const e=jP(cS),t=Cb(fS,e),n=Hi(),r=()=>{n("/")};return k.jsxs(YM,{children:[k.jsx(qi,{onClick:r,children:k.jsx(Zi,{})}),k.jsxs(Pl,{children:[k.jsxs(kb,{children:[k.jsx(Om,{initial:{opacity:0},animate:{opacity:t.img?1:0},transition:{duration:.5},children:k.jsxs("picture",{children:[k.jsx("source",{srcSet:`${t.img}.webp`,type:"image/webp"}),k.jsx("source",{srcSet:`${t.img}.png`,type:"image/png"}),k.jsx("img",{src:`${t.img}.png`,alt:t.name,width:"200px",height:"330px"})]})}),k.jsxs(Om,{marginLeft:!0,children:[k.jsx("h1",{children:t.name}),k.jsxs("div",{children:[k.jsxs("p",{children:["오늘의 점수 (",t.score,"점)"]}),k.jsx(Lb,{children:k.jsx(Nb,{percent:t.score,initial:{width:0},animate:{width:t.score?`${t.score}%`:"0px"},exit:{width:"0px"},transition:{duration:1}})}),k.jsxs(Ab,{children:[k.jsx(Au,{children:"나쁨"})," ",k.jsx(Au,{children:"보통"})," ",k.jsx(Au,{children:"좋음"})]})]}),k.jsxs("div",{children:[k.jsx("p",{children:"상세설명"}),k.jsx("p",{children:t.description})]})]})]}),k.jsx(Pb,{children:k.jsx(yr,{whileHover:{scale:1.1},whileTap:{scale:.9},onClick:r,children:"다시하기"})})]})]})},kb=X.div`
 	width: 710px;
 	height: auto;
