@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const BackgroundBlur = styled.div`
 	width: 100%;
-	height: 100vh;
+	height: auto;
 	min-height: 100vh;
 	background-image: url('/rozet/images/background-dark.jpg');
 	background-color: gray;

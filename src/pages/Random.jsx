@@ -85,9 +85,6 @@ const ButtonWrap = styled.div`
 
 const MotionContainer = styled(motion.div)`
 	width: 100vw;
-	height: 100vh;
+	height: auto;
 	background-color: color;
-	@media screen and (max-width: 767px) {
-		height: auto;
-	}
 `;
