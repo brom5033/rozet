@@ -52,7 +52,8 @@ const BannerImg = styled.img`
 	width: 100%;
 	height: auto;
 	max-width: 1250px;
-	max-height: 600px;
+	max-height: 900px;
+	min-height: 600px;
 	opacity: 0.3;
 	border-radius: 30px;
 `;

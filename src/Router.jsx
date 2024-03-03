@@ -10,9 +10,9 @@ import { Detail } from '@pages/Detail';
 
 export const Router = () => {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/rozet">
 			<Routes>
-				<Route path="/rozet" element={<Start />} />
+				<Route path="/" element={<Start />} />
 				<Route path="/randomcard" element={<Random />} />
 				<Route path="/result" element={<Result />} />
 				<Route path="/main" element={<Main />} />
